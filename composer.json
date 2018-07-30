@@ -38,7 +38,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AulaSoftwareLibre\\DDD\\Tests\\": "src/"
+            "AulaSoftwareLibre\\DDD\\TestsBundle\\": "src/"
         }
     }
 }
