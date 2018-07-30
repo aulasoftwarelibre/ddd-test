@@ -11,7 +11,7 @@
             "email": "victormonserratvillatoro@gmail.com"
         }
     ],
-    "type": "library",
+    "type": "symfony-bundle",
     "license": "MIT",
     "require": {
         "php": "^7.2",
@@ -25,6 +25,7 @@
         "prooph/event-store-symfony-bundle": "^0.5",
         "prooph/service-bus": "^6.2",
         "prooph/service-bus-symfony-bundle": "^0.7.0",
+        "symfony/http-kernel": "^4.1",
         "webmozart/assert": "^1.3"
     },
     "require-dev": {
@@ -38,7 +39,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AulaSoftwareLibre\\DDD\\Tests\\": "src/"
+            "AulaSoftwareLibre\\DDD\\TestsBundle\\": "src/"
         }
     }
 }

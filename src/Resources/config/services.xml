@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <defaults public="true" />
+
+        <service id="aulasl.shared_storage" class="AulaSoftwareLibre\DDD\TestsBundle\Service\InMemorySharedStorage" />
+        <service id="AulaSoftwareLibre\DDD\TestsBundle\Service\SharedStorage" alias="aulasl.shared_storage" />
+
+        <service id="aulasl.prooph_plugin.event_collector_plugin" class="AulaSoftwareLibre\DDD\TestsBundle\Service\Prooph\Plugin\EventCollectorPlugin">
+            <tag name="prooph_service_bus.event_bus.plugin" />
+        </service>
+    </services>
+</container>
