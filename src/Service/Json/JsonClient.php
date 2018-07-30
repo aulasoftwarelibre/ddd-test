@@ -21,7 +21,8 @@ use Webmozart\Assert\Assert;
 
 class JsonClient implements HttpClient
 {
-    private const CONTENT_TYPE = 'application/json';
+    private const CONTENT_TYPE = 'application/ld+json';
+    private const ACCEPT = 'application/json';
 
     /**
      * @var Client
@@ -38,7 +39,7 @@ class JsonClient implements HttpClient
         $this->client = $client;
         $this->headers = [
             'CONTENT_TYPE' => self::CONTENT_TYPE,
-            'HTTP_ACCEPT' => self::CONTENT_TYPE,
+            'HTTP_ACCEPT' => self::ACCEPT,
         ];
     }
 
@@ -62,7 +63,7 @@ class JsonClient implements HttpClient
     public function post(string $url, array $parameters = []): void
     {
         $this->client->restart();
-        $this->client->request(Request::METHOD_POST, $url, $parameters, [], $this->headers);
+        $this->client->request(Request::METHOD_POST, $url, [], [], $this->headers, json_encode($parameters));
     }
 
     public function put(string $url, array $parameters = []): void
@@ -75,7 +76,7 @@ class JsonClient implements HttpClient
     {
         $response = $this->client->getResponse();
 
-        Assert::isInstanceOf($response,Response::class);
+        Assert::isInstanceOf($response, Response::class);
 
         return $response;
     }
