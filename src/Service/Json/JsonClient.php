@@ -75,7 +75,7 @@ class JsonClient implements HttpClient
     {
         $response = $this->client->getResponse();
 
-        Assert::isInstanceOf(Response::class, $response);
+        Assert::isInstanceOf($response,Response::class);
 
         return $response;
     }
