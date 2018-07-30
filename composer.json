@@ -16,6 +16,7 @@
     "require": {
         "php": "^7.2",
         "ext-mbstring": "*",
+        "coduo/php-matcher": "^3.1",
         "doctrine/collections": "^1.5",
         "doctrine/dbal": "^2.8",
         "doctrine/orm": "^2.6",
