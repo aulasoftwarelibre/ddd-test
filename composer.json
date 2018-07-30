@@ -26,6 +26,8 @@
         "prooph/event-store-symfony-bundle": "^0.5",
         "prooph/service-bus": "^6.2",
         "prooph/service-bus-symfony-bundle": "^0.7.0",
+        "symfony/browser-kit": "^4.1",
+        "symfony/http-foundation": "^4.1",
         "symfony/http-kernel": "^4.1",
         "webmozart/assert": "^1.3"
     },

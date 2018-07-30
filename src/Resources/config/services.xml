@@ -16,5 +16,10 @@
 
         <service id="aulasl.response_asserter" class="AulaSoftwareLibre\DDD\TestsBundle\Service\Json\JsonResponseAsserter" />
         <service id="AulaSoftwareLibre\DDD\TestsBundle\Service\ResponseAsserter" alias="aulasl.response_asserter" />
+
+        <service id="aulasl.http_client" class="AulaSoftwareLibre\DDD\TestsBundle\Service\Json\JsonClient">
+            <argument type="service" id="test.client" />
+        </service>
+        <service id="\AulaSoftwareLibre\DDD\TestsBundle\Service\HttpClient" alias="aulasl.http_client" />
     </services>
 </container>
