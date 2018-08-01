@@ -60,16 +60,16 @@ class JsonClient implements HttpClient
         $this->client->request(Request::METHOD_GET, $url, $parameters, [], $this->headers);
     }
 
-    public function post(string $url, array $parameters = []): void
+    public function post(string $url, array $parameters = [], array $content = []): void
     {
         $this->client->restart();
-        $this->client->request(Request::METHOD_POST, $url, [], [], $this->headers, json_encode($parameters));
+        $this->client->request(Request::METHOD_POST, $url, $parameters, [], $this->headers, json_encode($content));
     }
 
-    public function put(string $url, array $parameters = []): void
+    public function put(string $url, array $parameters = [], array $content = []): void
     {
         $this->client->restart();
-        $this->client->request(Request::METHOD_PUT, $url, $parameters, [], $this->headers);
+        $this->client->request(Request::METHOD_PUT, $url, $parameters, [], $this->headers, json_encode($content));
     }
 
     public function response(): Response

@@ -23,9 +23,9 @@ interface HttpClient
 
     public function get(string $url, array $parameters = []): void;
 
-    public function post(string $url, array $parameters = []): void;
+    public function post(string $url, array $parameters = [], array $content = []): void;
 
-    public function put(string $url, array $parameters = []): void;
+    public function put(string $url, array $parameters = [], array $content = []): void;
 
     public function response(): Response;
 }
