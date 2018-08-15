@@ -21,5 +21,8 @@
             <argument type="service" id="test.client" />
         </service>
         <service id="\AulaSoftwareLibre\DDD\TestsBundle\Service\HttpClient" alias="aulasl.http_client" />
+
+        <service id="Prooph\EventStore\InMemoryEventStore" />
+        <service id="Prooph\EventStore\EventStore" alias="Prooph\EventStore\InMemoryEventStore" public="true" />
     </services>
 </container>
