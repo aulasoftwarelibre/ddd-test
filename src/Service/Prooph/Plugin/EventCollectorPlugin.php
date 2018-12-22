@@ -71,9 +71,9 @@ final class EventCollectorPlugin implements Plugin, EventsRecorder
         $this->listenerHandlers = [];
     }
 
-    public function getLastMessage(): CollectedMessage
+    public function getLastMessage(): ?CollectedMessage
     {
-        return $this->messages->last();
+        return $this->messages->last() ?? null;
     }
 
     /**
