@@ -10,10 +10,6 @@
         <service id="aulasl.shared_storage" class="AulaSoftwareLibre\DDD\TestsBundle\Service\InMemorySharedStorage" />
         <service id="AulaSoftwareLibre\DDD\TestsBundle\Service\SharedStorage" alias="aulasl.shared_storage" />
 
-        <service id="aulasl.prooph_plugin.event_collector_plugin" class="AulaSoftwareLibre\DDD\TestsBundle\Service\Prooph\Plugin\EventCollectorPlugin">
-            <tag name="prooph_service_bus.event_bus.plugin" />
-        </service>
-
         <service id="aulasl.messenger_middleware.event_collector_plugin" class="AulaSoftwareLibre\DDD\TestsBundle\Service\Messenger\Middleware\EventCollectorMiddleware" />
 
         <service id="aulasl.response_asserter" class="AulaSoftwareLibre\DDD\TestsBundle\Service\Json\JsonResponseAsserter" />

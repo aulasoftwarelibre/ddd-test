@@ -14,16 +14,10 @@ declare(strict_types=1);
 namespace AulaSoftwareLibre\DDD\TestsBundle;
 
 use AulaSoftwareLibre\DDD\TestsBundle\DependencyInjection\TestExtension;
-use Symfony\Component\Console\Application;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class TestBundle extends Bundle
 {
-    public function registerCommands(Application $application)
-    {
-        return [];
-    }
-
     public function getContainerExtension()
     {
         return new TestExtension();
