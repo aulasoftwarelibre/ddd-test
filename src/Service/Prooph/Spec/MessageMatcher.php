@@ -24,7 +24,7 @@ final class MessageMatcher
         }
 
         if ($message instanceof Message) {
-            return in_array($this->normalizeMessage($message), $this->normalizeMessages($producedMessages), true);
+            return \in_array($this->normalizeMessage($message), $this->normalizeMessages($producedMessages), true);
         }
 
         throw new \InvalidArgumentException(sprintf(

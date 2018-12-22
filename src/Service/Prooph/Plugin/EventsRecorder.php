@@ -17,7 +17,7 @@ use Doctrine\Common\Collections\Collection;
 
 interface EventsRecorder
 {
-    public function getLastMessage(): CollectedMessage;
+    public function getLastMessage(): ?CollectedMessage;
 
     /**
      * @return Collection|CollectedMessage[]

@@ -14,6 +14,8 @@
             <tag name="prooph_service_bus.event_bus.plugin" />
         </service>
 
+        <service id="aulasl.messenger_middleware.event_collector_plugin" class="AulaSoftwareLibre\DDD\TestsBundle\Service\Messenger\Middleware\EventCollectorMiddleware" />
+
         <service id="aulasl.response_asserter" class="AulaSoftwareLibre\DDD\TestsBundle\Service\Json\JsonResponseAsserter" />
         <service id="AulaSoftwareLibre\DDD\TestsBundle\Service\ResponseAsserter" alias="aulasl.response_asserter" />
 
